@@ -10,7 +10,7 @@ function TokoKece() {
     try {
       setStatus("Memproses pembayaran...");
       const res = await axios.post(
-        "https://toko-backend.onrender.com/api/checkout", // GANTI dengan URL backend-mu di Render
+        "https://toko-kece.vercel.app/", // GANTI dengan URL backend-mu di Render
         { email, product }
       );
       setStatus(res.data.message);
@@ -36,9 +36,9 @@ function TokoKece() {
         onChange={(e) => setProduct(e.target.value)}
         style={{ width: "100%", marginBottom: "10px" }}
       >
-        <option value="kaos-kece">Kaos Kece</option>
-        <option value="topi-gaya">Topi Gaya</option>
-        <option value="jaket-keren">Jaket Keren</option>
+        <option value="Akun FF">Kaos Kece</option>
+        <option value="Akun ML">Topi Gaya</option>
+        <option value="Akun FCM">Jaket Keren</option>
       </select>
 
       <button onClick={handleCheckout} style={{ width: "100%" }}>
